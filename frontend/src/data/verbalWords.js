@@ -1,0 +1,20 @@
+export const WORDS = [
+    "apple", "bridge", "cloud", "drift", "ember", "frost", "gloom", "haven",
+    "ivory", "jungle", "kneel", "lunar", "maple", "noble", "ocean", "prism",
+    "quill", "raven", "stone", "thorn", "ultra", "vivid", "waltz", "xenon",
+    "yield", "zephyr", "amber", "blaze", "coral", "delta", "eagle", "flint",
+    "grace", "haste", "inlet", "joust", "karma", "lance", "marsh", "novel",
+    "orbit", "petal", "quest", "realm", "scout", "trail", "umbra", "vapor",
+    "wrath", "axiom", "bloom", "crest", "dwarf", "epoch", "fable", "glare",
+    "helix", "ilk", "jewel", "knack", "latch", "mirth", "nexus", "omen",
+    "pivot", "quota", "ridge", "swift", "tidal", "unify", "verge", "whirl",
+    "expel", "yacht", "zenith", "acute", "brisk", "chasm", "depot", "exile",
+    "forge", "guile", "horde", "irony", "joker", "kinship", "lofty", "mural",
+    "nadir", "onset", "plume", "quirk", "rivet", "surge", "truce", "ulcer",
+    "venom", "wield", "yearn", "zonal", "abyss", "botch", "crisp", "drone",
+    "elude", "fluke", "graze", "hinge", "islet", "joist", "knave", "lyric",
+    "mimic", "notch", "optic", "perch", "qualm", "remit", "smear", "taunt",
+    "unwed", "vouch", "waver", "extol", "yeoman", "adept", "blunt", "creed",
+    "daunt", "envoy", "fervent", "gaunt", "haunt", "impel", "jumble", "kneel",
+    "lucid", "mourn", "nurture", "outdo", "prowl", "rabid", "scorn", "talon"
+];

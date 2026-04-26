@@ -1,0 +1,21 @@
+.not-found-page {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.not-found-page h1 {
+    color: #62baec;
+    letter-spacing: 2px;
+}
+
+.not-found-page p {
+    margin-top: 5px;
+    color: white;
+}
+
+.not-found-page button {
+    width: 25%;
+}

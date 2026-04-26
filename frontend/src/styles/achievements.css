@@ -1,0 +1,208 @@
+.ach-page {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ach-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.ach-header h1 {
+    color: #00d4ff;
+    font-size: 40px;
+}
+
+.ach-section {
+    margin-bottom: 50px;
+}
+
+.ach-title {
+    color: #E2E8F0;
+    font-size: 20px;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.ach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.ach-card {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.ach-card:hover {
+    z-index: 100;
+}
+
+.ach-card.locked {
+    opacity: 0.6;
+    filter: grayscale(0.05);
+    border-color: #2e2006;
+}
+
+.ach-card.locked:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.9);
+}
+
+.ach-card.unlocked {
+    animation: pulse-glow 3s infinite alternate;
+}
+
+.ach-emoji {
+    font-size: 40px;
+}
+
+.ach-card.bronze {
+    border-color: #cd7f32;
+    background: linear-gradient(145deg, #1a1a2e, #2c1e14);
+    box-shadow: 0 0 10px rgba(205, 127, 50, 0.2);
+}
+
+.ach-card.bronze:hover {
+    border-color: #e69138; /* Brighter bronze */
+    box-shadow: 0 0 20px rgba(205, 127, 50, 0.4);
+}
+
+.ach-card.silver {
+    border-color: #c0c0c0;
+    background: linear-gradient(145deg, #1a1a2e, #25252b);
+    box-shadow: 0 0 10px rgba(192, 192, 192, 0.1);
+}
+
+.ach-card.silver:hover {
+    border-color: #ffffff; /* Pure silver/white shine */
+    box-shadow: 0 0 20px rgba(192, 192, 192, 0.4);
+}
+
+.ach-card.gold {
+    border-color: #ffd700;
+    background: linear-gradient(145deg, #1a1a2e, #2a2405);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+}
+
+.ach-card.gold:hover {
+    border-color: #fff200; /* Brilliant gold shine */
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+}
+
+.status {
+    font-size: 12px;
+    color: #10B981;
+    font-weight: bold;
+}
+
+.prev-ach {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    bottom: 12px;
+    right: 12px;
+    background: #0f172a;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: default;
+    border: 1px solid #334155;
+}
+
+.prev-ach2 {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    bottom: 12px;
+    right: 46px;
+    background: #0f172a;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: default;
+    border: 1px solid #334155;
+    transition: border-color 0.2s ease;
+}
+
+.prev-ach.bronze, .prev-ach2.bronze { border-color: #cd7f32; }
+.prev-ach.silver { border-color: #c0c0c0; }
+
+.prev-ach.bronze:hover, .prev-ach2.bronze:hover { border-color: #f3b06d; }
+.prev-ach.silver:hover{ border-color: #ece8e8; }
+
+.tick {
+    position: absolute;
+    font-size: 10px;
+    bottom: -2px;
+    right: -2px;
+    color: #00FF00;
+    text-shadow: 0 0 3px #000;
+    z-index: 5;
+}
+
+.prev-ach:hover::after, .prev-ach2:hover::after {
+    content: attr(data-completed);
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 1;
+    border: 1px solid #00d4ff;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.ach-card:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    background-color: #273657;
+    color: #E2E8F0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    font-size: 12px;
+    white-space: normal;
+    z-index: 10;
+    pointer-events: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.ach-card:has(.prev-ach:hover)::after, .ach-card:has(.prev-ach2:hover)::after {
+    display: none !important;}
+
+@keyframes pulse-glow {
+    from {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+}

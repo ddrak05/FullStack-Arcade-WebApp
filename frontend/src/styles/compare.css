@@ -1,0 +1,230 @@
+/* Top header */
+.h2h-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.h2h-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F8FAFC;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-shadow: 0 0 30px rgb(96, 185, 241);
+}
+
+.h2h-icon {
+    font-size: 20px;
+    filter: drop-shadow(0 0 5px rgba(244, 63, 94, 0.5))
+}
+
+/* Panels */
+.compare-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(39, 53, 69, 0.3);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 40px 60px;
+    transition: border-color 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+
+.compare-container:hover {
+    border-color: #778daa;
+}
+
+.compare-container.overview {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 20px;
+}
+
+.compare{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.player-card {
+    background-color: #1E293B;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    border-bottom: 4px solid #38BDF8;
+    margin-bottom: 20px;
+    max-height: 195px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.player-card.me {
+    border-color: #bd7425;
+}
+
+.player-card.other {
+    border-color: #42bafb;
+}
+
+.player-card.me:hover {
+    border-color: #774d1c;
+    background-color: #19202c;
+}
+
+.player-card.other:hover {
+    border-color: #1b5b83;
+    background-color: #19202c;
+}
+
+.compare .stat-box {
+    height: 50px;
+}
+
+.stat-box.winner, .score-box.winner{
+    border: 1px solid #4ADE80;
+    color: #4ADE80;
+    background-color: rgba(74, 222, 128, 0.05);
+    box-shadow: inset 0 0 18px rgba(89, 220, 136, 0.3);
+    transition: background 0.2s ease-in-out;
+}
+
+.stat-box.winner:hover {
+    background-color: #0c151e;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Middle Column */
+.vs {
+    text-align: center;
+}
+
+.header-box {
+    margin-bottom: 20px;
+    height: 195px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #F43F5E;
+    text-shadow: 0 0 10px rgba(244, 63, 94, 0.5);
+}
+
+.title {
+    color: #94A3B8;
+    margin-top: 10px;
+}
+
+.info-label {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748B;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Best Scores Section */
+.compare-container.scores {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.compare-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #334155;
+}
+
+.button-period {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    width: 50%;
+}
+
+/* Scores Grid */
+.scores-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 15px;
+}
+
+.scores-row {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.score-box{
+    background-color: #0F172A;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 50px;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.score-box:hover {
+    background-color: #0c151e;
+}
+
+.score-box.me, .score-box.other {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.game-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
+}
+
+.game-emoji {
+    font-size: 14px;
+    margin-bottom: 1px;
+}
+
+.game-name {
+    font-size: 14px;
+    color: #64748B;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}

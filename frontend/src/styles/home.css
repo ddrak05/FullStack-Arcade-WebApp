@@ -1,0 +1,359 @@
+.home-page {
+    padding: 40px;
+    max-width: 1200px;
+    margin: -25px auto 0;
+}
+
+.home-title {
+    text-align: center;
+}
+
+.home-title h1 {
+    margin-bottom: 10px;
+}
+
+.home-title p {
+    color: #b6c1d1;
+    margin-bottom: 10px;
+}
+
+/* User's Level Display */
+.home-level{
+    margin: 0 auto 30px auto;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-level h2{
+    color: #00d4ff;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.progress-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-bar-container {
+    position: relative;
+    width: 100%;
+    height: 24px;
+    background: #333333;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar-fill {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #00d4ff, #005f73);
+    transition: width 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.xp-percentage {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Level Up */
+.level-up-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 1 !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.level-up {
+    background: #1e293b;
+    border: 2px solid #00d4ff;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.lvl-emoji {
+    font-size: 50px;
+}
+
+.lvl-number {
+    font-weight: bold;
+    color: #00d4ff;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+}
+
+/* Game Categories */
+.category-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 32px auto;
+    user-select: none;
+}
+
+.category-card {
+    width: 100%;
+    background-color: #1E293B;
+    border: 2px solid #334155;
+    border-radius: 16px;
+    padding: 32px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    max-height: 400px;
+    overflow: hidden;
+    transition: max-height 0.3s ease,
+        padding 0.3s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        opacity 0.1s ease;
+}
+
+.category-card.compact {
+    padding: 14px 24px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    max-height: 56px;
+}
+
+.category-card:hover {
+    background-color: #181f2b;
+    border-color: #5d7391;
+}
+
+.category-card.active {
+    background-color: #181f2b;
+    border-color: #5d7391;
+}
+
+.category-card.animating {
+    opacity: 0.5;
+}
+
+/* Category Content */
+.category-emoji {
+    font-size: 48px;
+    transition: font-size 0.3s ease;
+}
+
+.category-card.compact .category-emoji {
+    font-size: 24px;
+}
+
+.category-name {
+    color: #e2e8f0;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    transition: font-size 0.3s ease;
+}
+
+.category-card.compact .category-name {
+    font-size: 16px;
+}
+
+.category-desc {
+    color: #64748B;
+    font-size: 16px;
+    margin: 0;
+}
+
+.category-card.compact .category-desc,
+.category-card.compact .category-games {
+    display: none;
+}
+
+.category-games {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    width: 100%;
+}
+
+.category-game {
+    color: #37BDF8;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #0F172A;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.category-game:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
+/* Game Cards */
+.games-grid-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.games-grid-wrapper.visible {
+    max-height: 1000px;
+}
+
+.games-grid {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    animation: fadeSlideIn 0.3s ease;
+}
+
+.game-card {
+    cursor: pointer;
+    background-color: #1E293B;
+    border: 1px solid #372a12;
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+.game-card:hover {
+    border-color: #c1750a;
+    transform: translateY(-4px);
+}
+
+.game-card h2 {
+    margin: 0;
+}
+
+.game-emoji-2 {
+    font-size: 32px;
+}
+
+.game-description {
+    color: #b6c1d1;
+    margin: 0;
+    flex-grow: 1;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.achievement-counter {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 800;
+    font-size: 0.95rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.achievement-counter.silver {
+    color: #b5b2b2;
+    background: rgba(192, 192, 192, 0.1);
+    border-color: rgba(192, 192, 192, 0.4);
+    box-shadow: inset 0 0 10px rgba(192, 192, 192, 0.1);
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.achievement-counter.gold {
+    color: #ffda44;
+    background: rgba(255, 218, 68, 0.15);
+    border-color: rgba(255, 218, 68, 0.6);
+    text-shadow: 0 0 15px rgba(255, 218, 68, 0.8);
+    box-shadow: 0 0 20px rgba(255, 218, 68, 0.2),
+    inset 0 0 15px rgba(255, 218, 68, 0.1);
+    transform: scale(1.05);
+    animation: gold-pulse 2s infinite ease-in-out;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.achievement-counter:hover {
+    background-color: rgba(216, 178, 178, 0.05);
+    transform: translateY(-10%);
+}
+
+.achievement-counter.silver:hover {
+    background: rgba(64, 63, 63, 0.1);
+    transform: translateY(-10%);
+}
+
+.achievement-counter.gold:hover {
+    background: rgba(138, 118, 4, 0.15);
+    transform: translateY(-10%);
+}
+
+@keyframes gold-pulse {
+    0% { filter: brightness(1); }
+    50% { filter: brightness(1.3); }
+    100% { filter: brightness(1); }
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

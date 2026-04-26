@@ -1,0 +1,101 @@
+.game-header {
+    margin-top: -25px !important;
+}
+
+.end-results.ttt {
+    margin-top: 20px;
+    width: 400px;
+}
+
+.ttt-board{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(3, 90px);
+    gap: 8px;
+}
+
+.ttt-cell{
+    background: #1E293B;
+    border: 2px solid #334155;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 54px;
+    font-family: 'Verdana', 'Arial Black', sans-serif;
+    font-weight: 900;
+    transition: background 0.6s ease-in-out, border-color 0.6s ease-in-out;
+    user-select: none;
+    line-height: 1;
+}
+
+.ttt-cell:hover{
+    background: #191f2e;
+    border-color: #4b5d78;}
+
+.ttt-cell.x{
+    color: red;
+    text-shadow:
+            3px 3px 0 rgba(0, 0, 0, 0.4),
+            0 0 15px rgba(239, 68, 68, 0.3),
+            0 0 30px rgba(239, 68, 68, 0.15);
+}
+
+.ttt-cell.o{
+    color: green;
+    text-shadow:
+            3px 3px 0 rgba(0, 0, 0, 0.4),
+            0 0 15px rgba(34, 197, 94, 0.3),
+            0 0 30px rgba(34, 197, 94, 0.15);
+}
+
+.finish-btn {
+    margin-top: 10px !important;
+}
+
+.turn{
+    color: #bcbfbf;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.ttt-result{
+    font-size: 20px;
+}
+
+.ttt-result.Won{
+    color: #8fcd8f;
+}
+
+.ttt-result.Lost{
+    color: #f36868;
+}
+
+.ttt-result.Drew {
+    color: #eaa541;
+}
+
+.play-again {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20.5%;
+}
+
+.scoreboard{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #95afaf;
+    font-size: 20px;
+}

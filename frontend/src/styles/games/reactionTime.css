@@ -1,0 +1,213 @@
+.back {
+    position: absolute;
+    top: 10%;
+    left: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 15%;
+}
+
+.back:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.game-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 60px;
+}
+
+.game-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
+.game-header .try{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #97b1e8;
+}
+
+/* Box */
+.reaction-box{
+    margin-top: -20px;
+    width: 100%;
+    height: 420px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    user-select: none; /* Prevents text selection on clicks*/
+}
+
+.reaction-box h2{
+    margin-top: 14px;
+    font-size: 26px;
+    color: #94A3B8;
+}
+
+.reaction-box .ms{
+    color: #f68a8a;
+}
+
+/* Box Color per State */
+.reaction-box.idle{
+    background-color: #1E293B;
+    border: 2px solid #93bbec;
+}
+
+.reaction-box.waiting{
+    background-color: #670202;
+    border: 2px solid #cd6363;
+}
+
+.reaction-box.ready{
+    background-color: #257025;
+    border: 2px solid #77df77;
+}
+
+/* Results */
+.final-screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.final-screen h2{
+    margin-top: -15px;
+    color: #a2c9fb;
+}
+
+.tries{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 60%;
+    max-width: 500px;
+}
+
+.try-row{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1E293B;
+    border: 1px solid #5a697e;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.try-row:hover{
+    background-color: #0b3149;
+}
+
+.try-time{
+    color: #eda5a5;
+}
+
+.avg{
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1E293B;
+    border: 1px solid #5a697e;
+    border-radius: 8px;
+    padding: 20px 20px;
+    font-size: 16px;
+    height: 60px;
+    width: 100%;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.avg:hover{
+    background-color: #0b3149;
+}
+
+.avg-time{
+    color: #b2df9d;
+}
+
+.result-avg {
+    color: #f3d3a1;
+}
+
+/* Achievements */
+.res-achievements {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: rgba(147, 187, 236, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(147, 187, 236, 0.3);
+    transition: border-color 0.4s ease-in-out;
+}
+
+.res-achievements h2 {
+    font-size: 18px;
+    color: #f3d3a1;
+    margin-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ach-unlocked-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E293B;
+    border: 1px solid rgba(119, 223, 119, 0.3);
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 15px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ach-unlocked-item:hover {
+    background-color: #0b3149;
+}
+
+.ach-unlocked-item .green {
+    color: #77df77;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(119, 223, 119, 0.4);
+}
+
+.ach-unlocked-item.bronze {
+    border: 1px solid #cd7f32 ;
+    box-shadow: inset 0 0 10px rgba(205, 127, 50, 0.1) ;
+}
+
+.ach-unlocked-item.silver {
+    border: 1px solid #c0c0c0;
+    box-shadow: inset 0 0 10px rgba(192, 192, 192, 0.1);
+}
+
+.ach-unlocked-item.gold {
+    border: 1px solid #ffd700;
+    box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.15);
+}
+
+.ach-unlocked-item.bronze:hover { border-color: #ff9d42; }
+.ach-unlocked-item.silver:hover { border-color: #ffffff; }
+.ach-unlocked-item.gold:hover { border-color: #fff06a; }

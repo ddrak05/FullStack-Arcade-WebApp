@@ -1,0 +1,128 @@
+.words{
+    background-color: #1E293B;
+    border: 2px solid #334155;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 16px;
+    width: 25%;
+    transition: background 0.4s ease-in-out;
+}
+
+.words h2{
+    text-align: center;
+}
+
+.verbal-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #b5b5ef;
+
+}
+
+.words:hover{
+    background-color: #1b2332;
+}
+
+.buttons{
+    display: flex;
+    gap: 16px;
+    width: 25%;
+}
+
+.btn{
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out, color 0.2s ease-in-out;
+}
+
+.btn.seen:hover{
+    color: #a4b59d;
+}
+
+.btn.new:hover{
+    color: #f48585;
+}
+
+.end{
+    background-color: rgba(54, 81, 97, 0.3);
+    border: 2px solid rgba(90, 105, 117, 0.3);
+    border-radius: 12px;
+    padding: 24px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.4s ease-in-out;
+}
+
+.end:hover{
+    background-color: rgba(52, 66, 73, 0.3);
+}
+
+.play-again{
+    background-color: rgba(56, 88, 94, 0.3);
+    transition: background 0.4s ease-in-out;
+}
+
+
+.score{
+    color: #a7bd9d;
+    font-weight: bold;
+}
+
+.end p{
+    color: rgb(122, 158, 184);
+}
+
+.play-again{
+    width: 100%;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 750px;
+    margin-top: 32px;
+}
+
+.history h2{
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+.history-words{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.history-word{
+    cursor: default;
+    background-color: #1b2332;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    padding: 6px 12px;
+    color: #c5d2e6;
+    font-size: 14px;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.history-word:hover{
+    background-color: #1a1e27;
+}
+
+.result-score {
+    color: #f3c07a;
+}

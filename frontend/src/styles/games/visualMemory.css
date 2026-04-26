@@ -1,0 +1,65 @@
+.vm-grid {
+    display: grid;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+/* Customize based on grid size */
+.vm-grid.grid-3 {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.vm-grid.grid-4 {
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(4, 80px);
+}
+
+.vm-grid.grid-5 {
+    grid-template-columns: repeat(5, 70px);
+    grid-template-rows: repeat(5, 70px);
+}
+
+.vm-grid.grid-6 {
+    grid-template-columns: repeat(6, 60px);
+    grid-template-rows: repeat(6, 60px);
+}
+
+.vm-grid.grid-7 {
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: repeat(7, 50px);
+}
+
+.vm-grid.grid-8 {
+    grid-template-columns: repeat(8, 40px);
+    grid-template-rows: repeat(8, 40px);
+}
+
+.vm-cell {
+    background: #1E293B;
+    border: 2px solid #334155;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.vm-cell:hover {
+    background: #191f2e;
+    border-color: #4b5d78;
+}
+
+.vm-cell.active {
+    background: #436171;
+    border-color: #8399a3;
+    transition: background 0.8s ease, border-color 0.8s ease;
+}
+
+.vm-cell.hiding {
+    background: #1E293B;
+    border-color: #334155;
+    transition: background 0.5s ease, border-color 0.5s ease;
+}
+
+.vm-cell.clicked {
+    background: #436171;
+    border-color: #9cb1bc;
+}
