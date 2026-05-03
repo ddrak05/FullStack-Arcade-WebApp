@@ -17,5 +17,5 @@ createRoot(document.getElementById('root')).render(
 )
 
 // StrictMode
-// ---> Auth Provider (gives auth access to everything inside)
+// ---> Auth Provider wr(gives auth access to everything inside)
 //      ---> App (all the pages and routes)

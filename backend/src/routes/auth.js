@@ -1,6 +1,7 @@
 // auth.js
 import express from 'express';
-import {register,
+import {
+    register,
     login,
     refreshToken
 } from '../controllers/authController.js';

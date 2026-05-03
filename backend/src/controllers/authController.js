@@ -127,6 +127,7 @@ export async function login(req, res) {
 
 export async function refreshToken (req, res) {
     try {
+        // Refresh Token timer
         const userId = req.user.id;
         const userUsername = req.user.username;
 

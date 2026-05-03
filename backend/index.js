@@ -25,7 +25,7 @@ app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/settings', settingsRoutes)
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 })
